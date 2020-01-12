@@ -5,9 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Comic_API"
         mc:Ignorable="d"
-        Title="SunInfo" Height="450" Width="800">
+        Title="SunInfo" Height="243" Width="542" WindowStartupLocation="CenterScreen">
+    
     <Grid>
-        <Button x:Name="SunInfo_Button" Content="View Sun rise / Sun set" HorizontalAlignment="Center" Margin="0,26,0,0" VerticalAlignment="Top" Width="522" Height="60"/>
+        <StackPanel>
+        <Button x:Name="SunInfo_Button" Content="View Sun Rise / Sun Set" HorizontalAlignment="Center" Padding="20" Margin="20" FontSize="24" Click="SunInfo_Button_Click"/>
+            <TextBlock x:Name="sunRiseText" Margin="20"></TextBlock>
+            <TextBlock x:Name="sunSetText" Margin="20"></TextBlock>
 
+        </StackPanel>
     </Grid>
 </Window>

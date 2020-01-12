@@ -21,5 +21,13 @@ namespace Comic_API
         {
             InitializeComponent();
         }
+
+        private async void SunInfo_Button_Click(object sender, RoutedEventArgs e)
+        {
+            var sunInfo = await SunProcessor.LoadSunInformation();
+            sunRiseText.Text = $"Sunrise is at {sunInfo.Sunrise.ToLocalTime().ToShortTimeString()}";
+            sunSetText.Text = $"Sunset is at {sunInfo.Sunset.ToLocalTime().ToShortTimeString()}";
+
+        }
     }
 }

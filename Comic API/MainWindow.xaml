@@ -5,19 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Comic_API"
         mc:Ignorable="d" FontSize="22" Loaded="Window_Loaded"
-        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Comic API Client" Height="500" Width="850" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="96*" />
+            <RowDefinition Height="35*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button x:Name="previousImageButton" Padding="15" Margin="15" >Previous</Button>
-            <Button x:Name="sunInformationButton" Padding="15" Margin="15" >Sun Information</Button>
-            <Button x:Name="nextImageButton" Padding="15" Margin="15" >Next</Button>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="586" Height="91" VerticalAlignment="Center">
+
+            <Button x:Name="previousImageButton" Padding="15" Margin="15" Click="previousImageButton_Click" Content="Previous"/>
+            <Button x:Name="nextImageButton" Padding="15" Margin="15" Click="nextImageButton_Click" Content="Next"/>
+            <Button x:Name="sunInformationButton" Padding="15" Margin="15" Click="sunInformationButton_Click" Content="Sun Info"/>
+            <Button x:Name="configurationButton" Padding="15" Margin="15" Click="configurationButton_Click" Content="Configuration"/>
         </StackPanel>
 
-        <Image Grid.Row="1" x:Name="comicImage" Margin="20" />
+        <Image Grid.Row="1" x:Name="comicImage" Margin="20,20,20,4" />
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Width="504" Height="85" VerticalAlignment="Center">
+            <Label x:Name="comicLabel" Margin="10" Content="Todays Comic" Width="185" FontWeight="Bold" FontFamily="Arial Black" Height="45"/>
+            <Button x:Name="randomButton" Margin="10" Padding="10" Click="randomButton_Click" Content="Random"/>
+            <Button x:Name="todaysComicButton" Margin="10" Padding="10" Click="todaysComicButton_Click" Content="Todays Comic" />
+        </StackPanel>
     </Grid>
 </Window>
