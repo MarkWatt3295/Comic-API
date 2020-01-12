@@ -4,14 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Comic_API"
-        mc:Ignorable="d" Loaded="Window_Loaded"
-        
+        mc:Ignorable="d" FontSize="22" Loaded="Window_Loaded"
         Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button x:Name="Previous" Content="Previous" HorizontalAlignment="Left" Height="66" Margin="10,10,0,0" VerticalAlignment="Top" Width="217"/>
-        <Button x:Name="Sun_Information" Content="Sun Details" HorizontalAlignment="Left" Height="66" Margin="267,10,0,0" VerticalAlignment="Top" Width="261"/>
-        <Button x:Name="Next" Content="Next" HorizontalAlignment="Left" Height="66" Margin="573,10,0,0" VerticalAlignment="Top" Width="217"/>
-        <Image x:Name="comicImage" HorizontalAlignment="Left" Height="316" Margin="30,102,0,0" VerticalAlignment="Top" Width="732"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="previousImageButton" Padding="15" Margin="15" >Previous</Button>
+            <Button x:Name="sunInformationButton" Padding="15" Margin="15" >Sun Information</Button>
+            <Button x:Name="nextImageButton" Padding="15" Margin="15" >Next</Button>
+        </StackPanel>
+
+        <Image Grid.Row="1" x:Name="comicImage" Margin="20" />
     </Grid>
 </Window>
