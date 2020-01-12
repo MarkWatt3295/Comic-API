@@ -1,0 +1,17 @@
+﻿<Window x:Class="Comic_API.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Comic_API"
+        mc:Ignorable="d" Loaded="Window_Loaded"
+        
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button x:Name="Previous" Content="Previous" HorizontalAlignment="Left" Height="66" Margin="10,10,0,0" VerticalAlignment="Top" Width="217"/>
+        <Button x:Name="Sun_Information" Content="Sun Details" HorizontalAlignment="Left" Height="66" Margin="267,10,0,0" VerticalAlignment="Top" Width="261"/>
+        <Button x:Name="Next" Content="Next" HorizontalAlignment="Left" Height="66" Margin="573,10,0,0" VerticalAlignment="Top" Width="217"/>
+        <Image x:Name="comicImage" HorizontalAlignment="Left" Height="316" Margin="30,102,0,0" VerticalAlignment="Top" Width="732"/>
+
+    </Grid>
+</Window>
