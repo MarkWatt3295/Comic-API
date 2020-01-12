@@ -109,7 +109,8 @@ namespace Comic_API
 
         private void configurationButton_Click(object sender, RoutedEventArgs e)
         {
-
+            ConfigurationWindow conf = new ConfigurationWindow();
+            conf.Show();
         }
 
         private async void randomButton_Click(object sender, RoutedEventArgs e)

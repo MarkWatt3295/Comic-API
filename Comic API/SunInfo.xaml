@@ -4,15 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Comic_API"
-        mc:Ignorable="d"
+        mc:Ignorable="d"  ResizeMode="NoResize"
         Title="SunInfo" Height="243" Width="542" WindowStartupLocation="CenterScreen">
-    
-    <Grid>
-        <StackPanel>
-        <Button x:Name="SunInfo_Button" Content="View Sun Rise / Sun Set" HorizontalAlignment="Center" Padding="20" Margin="20" FontSize="24" Click="SunInfo_Button_Click"/>
-            <TextBlock x:Name="sunRiseText" Margin="20"></TextBlock>
-            <TextBlock x:Name="sunSetText" Margin="20"></TextBlock>
 
-        </StackPanel>
+    <Grid>
+
+        <Button x:Name="SunInfo_Button" Content="View Sun Rise / Sun Set" HorizontalAlignment="Left" Padding="5" Margin="20,15,0,139" FontSize="24" Click="SunInfo_Button_Click" Width="305"/>
+        <TextBlock x:Name="sunSetText" Margin="20,88,222,82" FontSize="24"/>
+        <TextBlock x:Name="sunRiseText" Margin="20,150,222,10" FontSize="24"></TextBlock>
+        <Image HorizontalAlignment="Left" Height="188" Margin="325,15,0,0" VerticalAlignment="Top" Width="207" Source="sun.png"/>
+
     </Grid>
 </Window>

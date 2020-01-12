@@ -10,7 +10,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="gear.png" />
+    <None Remove="sun.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="gear.png" />
+    <Resource Include="sun.png" />
   </ItemGroup>
 
 </Project>
